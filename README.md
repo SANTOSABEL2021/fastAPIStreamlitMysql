@@ -8,3 +8,9 @@ pip install PyMySQL
 pip install streamlit
 pip install fastapi
 pip install bcrypt
+
+ativar a API
+uvicorn main:app --reload
+ativar o streamlit
+streamlit run app.py
+
