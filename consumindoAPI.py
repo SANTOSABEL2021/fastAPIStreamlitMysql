@@ -35,7 +35,7 @@ async def get_post(post_id: int):
 @app.get("/cep/{nr_cep}")
 async def pegar_cep(nr_cep: int):
     """
-    Retorna um post específico baseado no ID, obtido da API pública.
+    Retorna um CEP específico baseado no CEP  informado.
     """
     async with httpx.AsyncClient() as client:
         response = await client.get(f"https://viacep.com.br/ws/{nr_cep}/json/")
@@ -43,4 +43,4 @@ async def pegar_cep(nr_cep: int):
         if response.status_code == 200:
             return response.json()
         else:
-            return response
+            return {"mensagem de erro":f"CEP {nr_cep} não localizado"}
