@@ -4,7 +4,6 @@ import requests
 # Configuração inicial
 BASE_URL = "http://127.0.0.1:8000"
 #teste
-
 st.set_page_config(page_title="Sistema de Login", layout="centered")
 
 # Função para validar campos
